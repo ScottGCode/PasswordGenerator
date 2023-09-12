@@ -1,9 +1,10 @@
-// password character key set
+// password character key set.
 var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
 var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var numeric = '0123456789';
 var special = '~!@#$%^&*()';
 
+// obtaing user preferences for password generation.
 function generatePassword() {
     var passwordLength = getLength();
     var includeLower = getLower();
@@ -68,6 +69,7 @@ function getSpecial() {
     return specialChoice === 'y';
 }
 
+// This alters the HTML in the document to display the generated password. It activates upon a click event. 
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", function () {
     var password = generatePassword();
